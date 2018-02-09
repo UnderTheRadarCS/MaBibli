@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaBibli", "MaBibli\MaBibli.csproj", "{BA4E9B00-FA0C-4684-BB4A-B55B1B0CC3B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyGraphicsComponents", "MaBibli\MyGraphicsComponents.csproj", "{BA4E9B00-FA0C-4684-BB4A-B55B1B0CC3B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaConsole", "LaConsole\LaConsole.csproj", "{39D4399A-92D6-468C-B4FC-37E1A3560B4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestApp", "LaConsole\ConsoleTestApp.csproj", "{39D4399A-92D6-468C-B4FC-37E1A3560B4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

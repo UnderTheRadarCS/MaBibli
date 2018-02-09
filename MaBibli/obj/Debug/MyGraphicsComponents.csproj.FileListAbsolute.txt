@@ -1,0 +1,6 @@
+C:\Users\FDP\source\repos\MaBibli\MaBibli\bin\Debug\MaBibli.dll
+C:\Users\FDP\source\repos\MaBibli\MaBibli\bin\Debug\MaBibli.pdb
+C:\Users\FDP\source\repos\MaBibli\MaBibli\obj\Debug\MyGraphicsComponents.csprojResolveAssemblyReference.cache
+C:\Users\FDP\source\repos\MaBibli\MaBibli\obj\Debug\MyGraphicsComponents.csproj.CoreCompileInputs.cache
+C:\Users\FDP\source\repos\MaBibli\MaBibli\obj\Debug\MaBibli.dll
+C:\Users\FDP\source\repos\MaBibli\MaBibli\obj\Debug\MaBibli.pdb

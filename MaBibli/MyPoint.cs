@@ -4,33 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 
 	public class MyPoint
 	{
+		private int _x;
 
+		public int X
+		{
+			get { return _x; }
+			set { _x = value; }
+		}
 
-		public int x
-		{ get; set; }
-		public int y
-		{ get; set; }
+		private int _y;
+
+		public int Y
+		{
+			get {return _y; }
+			set {_y = value; }
+		}
 
 		public MyPoint()
 		{
-			x = 0;
-			y = 0;
+			X = 0;
+			Y = 0;
 		}
 
-		public MyPoint(int a, int b)
+		public MyPoint(int x, int y)
 		{
-			x = a;
-			y = b;
+			X = x;
+			Y = y;
 		}
 
 		public override string ToString()
 		{
-			return "Point : ( " + x + ", " + y + ")";
+			return "Point : ( " + X + ", " + Y + ")";
 		}
 
 	}

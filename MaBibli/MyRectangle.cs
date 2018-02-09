@@ -4,64 +4,73 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 
 	public class MyRectangle : MyShape, IlsPointIn, IPointy, IComparable<MyRectangle>, IEquatable<MyRectangle>
 	{
-		public byte Points
-		{ get; }
+		
+		public int Points()
+		{
+			return 4;
+		}
 
-		public int longueur
-		{ get; set; }
+		private int _longueur;
 
-		public int largeur
-		{ get; set; }
+		public int Longueur
+		{
+			get {return _longueur; }
+			set {_longueur = value; }
+		}
+
+		private int _largeur;
+
+		public int Largeur
+		{
+			get { return _largeur; }
+			set { _largeur = value; }
+		}
 
 		public MyRectangle()
 		{
-			Points = 4;
-			largeur = 5;
-			longueur = 10;
+			Largeur = 5;
+			Longueur = 10;
 		}
 
-		public MyRectangle(int x, int y)
+		public MyRectangle(int longueur, int largeur)
 		{
-			Points = 4;
-			longueur = x;
-			largeur = y;
+			Longueur = longueur;
+			Largeur = largeur;
 		}
 
-		public MyRectangle(int x, int y, MyPoint acc)
+		public MyRectangle(int longueur, int largeur, MyPoint accroche)
 		{
-			Points = 4;
-			longueur = x;
-			largeur = y;
-			accroche.x = acc.x;
-			accroche.y = acc.y;
+			Longueur = longueur;
+			Largeur = largeur;
+			Accroche = accroche;
 		}
 
 		public override string ToString()
 		{
-			return "MyRectangle :    accroche = " + accroche.ToString() + "    longueur = " + longueur + "    largeur = " + largeur + "\n";
+			return "MyRectangle :    accroche = " + Accroche + "    longueur = " + Longueur + "    largeur = " + Largeur + "\n";
 		}
 
 		public override int GetAire()
 		{
-			return longueur * largeur;
+			return Longueur * Largeur;
 		}
 
 		public override void Draw()
 		{
-			Console.WriteLine("Methode Draw -> " + this.ToString());
+			Console.WriteLine("Methode Draw -> " + this);
 		}
 
 		public bool IsPointIn(MyPoint point)
 		{
-			if (point.x < this.accroche.x || point.y < this.accroche.y)
+			if (point.X < this.Accroche.X || point.Y < this.Accroche.Y)
 				return false;
 			else
-				if (point.x > (this.accroche.x + this.longueur) || point.y > (this.accroche.y + this.largeur))
+				if (point.X > (this.Accroche.X + this.Longueur) || point.Y > (this.Accroche.Y + this.Largeur))
 				return false;
 			else
 				return true;
@@ -69,13 +78,13 @@ namespace MaBibli
 
 		public int CompareTo(MyRectangle other)
 		{
-			return (longueur*largeur).CompareTo((other.longueur * other.largeur));
+			return (Longueur*Largeur).CompareTo((other.Longueur * other.Largeur));
 		}
 
 		public bool Equals(MyRectangle rect)
 		{
 			if (rect != null && rect is MyRectangle)
-				return (longueur.Equals(rect.longueur) && largeur.Equals(rect.largeur));
+				return (Longueur.Equals(rect.Longueur) && Largeur.Equals(rect.Largeur));
 			else
 				return false;
 		}
@@ -92,7 +101,7 @@ namespace MaBibli
 	{
 		public int Compare(MyRectangle a, MyRectangle b)
 		{
-			return a.accroche.x.CompareTo(b.accroche.x);
+			return a.Accroche.X.CompareTo(b.Accroche.X);
 		}
 
 	}

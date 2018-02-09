@@ -4,45 +4,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 	public class MySquare : MyShape, IlsPointIn, IPointy, IComparable<MySquare>, IEquatable<MySquare>
 	{
-		public int longueur
-		{ get; set; }
+		private int _longueur;
+		
+		public int Longueur
+		{
+			get { return _longueur; }
+			set { _longueur = value; }
+		}
 
-		public byte Points
-		{ get; }
+		public int Points()
+		{
+			return 4;
+		}
 
 		public MySquare()
 		{
-			Points = 4;
-			longueur = 10;
+			Longueur = 10;
 		}
 
-		public MySquare(int x)
+		public MySquare(int longueur)
 		{
-			Points = 4;
-			longueur = x;
+			Longueur = longueur;
 		}
 
-		public MySquare(int x, MyPoint acc)
+		public MySquare(int longueur, MyPoint accroche)
 		{
-			Points = 4;
-			longueur = x;
-			accroche.x = acc.x;
-			accroche.y = acc.y;
+			Longueur = longueur;
+			Accroche = accroche;
 		}
 
 		public int CompareTo(MySquare other)
 		{
-			return longueur.CompareTo(other.longueur);
+			return Longueur.CompareTo(other.Longueur);
 		}
 
 		public bool Equals(MySquare square)
 		{
 			if (square != null && square is MySquare)
-				return longueur.Equals(square.longueur);
+				return Longueur.Equals(square.Longueur);
 			else
 				return false;
 		}
@@ -54,25 +57,25 @@ namespace MaBibli
 
 		public override string ToString()
 		{
-			return "MySquare :    accroche = " + accroche.ToString() + "    longueur = " + longueur + "\n";
+			return "MySquare :    accroche = " + Accroche + "    longueur = " + Longueur + "\n";
 		}
 
 		public override int GetAire()
 		{
-			return longueur * longueur;
+			return Longueur * Longueur;
 		}
 
 		public override void Draw()
 		{
-			Console.WriteLine("Methode Draw -> " + this.ToString());
+			Console.WriteLine("Methode Draw -> " + this);
 		}
 
 		public bool IsPointIn(MyPoint point)
 		{
-			if (point.x < this.accroche.x || point.y < this.accroche.y)
+			if (point.X < this.Accroche.X || point.Y < this.Accroche.Y)
 				return false;
 			else
-				if (point.x > (this.accroche.x + this.longueur) || point.y > (this.accroche.y + this.longueur))
+				if (point.X > (this.Accroche.X + this.Longueur) || point.Y > (this.Accroche.Y + this.Longueur))
 				return false;
 			else
 				return true;
@@ -83,7 +86,7 @@ namespace MaBibli
 	{
 		public int Compare(MySquare a, MySquare b)
 		{
-			return a.accroche.x.CompareTo(b.accroche.x);
+			return a.Accroche.X.CompareTo(b.Accroche.X);
 		}
 
 	}

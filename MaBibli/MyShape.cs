@@ -4,19 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 	abstract public class MyShape : IComparable<MyShape>
 	{
 
-		public MyPoint accroche
+		private MyPoint _accroche;
+
+		public MyPoint Accroche
 		{
-			get; set;
+			get { return _accroche; }
+			set { _accroche = value; }
 		}
 
 		public MyShape()
 		{
-			accroche = new MyPoint();
+			Accroche = new MyPoint();
 		}
 
 		public int CompareTo(MyShape other)

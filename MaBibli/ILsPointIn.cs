@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 	interface IlsPointIn
 	{
@@ -12,10 +12,7 @@ namespace MaBibli
 	}
 
 	public interface IPointy
-	{ 
-		 byte Points
-			{ get; }
-
-		
+	{
+		int Points();
 	}
 }

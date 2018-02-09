@@ -4,34 +4,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MaBibli
+namespace MyGraphicsComponents
 {
 
 	public class MyCircle : MyShape, IlsPointIn, IComparable<MyCircle>, IEquatable<MyCircle>
 	{
+		private int _rayon;
+		
 		public int Rayon
-		{ get; set; }
+		{
+			get { return _rayon; }
+			set { _rayon = value;}
+		}
 
 		public MyCircle()
 		{
 			Rayon = 10;
 		}
 
-		public MyCircle(int x)
+		public MyCircle(int rayon)
 		{
-			Rayon = x;
+			Rayon = rayon;
 		}
 
-		public MyCircle(int x, MyPoint acc)
+		public MyCircle(int rayon, MyPoint accroche)
 		{
-			Rayon = x;
-			accroche.x = acc.x;
-			accroche.y = acc.y;
+			Rayon = rayon;
+			Accroche = accroche;
 		}
 
 		public override string ToString()
 		{
-			return "MyCircle :    accroche = " + accroche.ToString() + "    Rayon = " + Rayon + "\n";
+			return "MyCircle :    accroche = " + Accroche + "    Rayon = " + Rayon + "\n";
 		}
 
 		public override int GetAire()
@@ -42,22 +46,22 @@ namespace MaBibli
 
 		public override void Draw()
 		{
-			Console.WriteLine("Methode Draw -> " + this.ToString());
+			Console.WriteLine("Methode Draw -> " + this);
 		}
 
 		public bool IsPointIn(MyPoint point)
 		{
 			int iVarx, iVary, Idifference;
 
-			if (point.x > accroche.x)
-				iVarx = point.x - accroche.x;
+			if (point.X > Accroche.X)
+				iVarx = point.X - Accroche.X;
 			else
-				iVarx = accroche.x - point.x;
+				iVarx = Accroche.X - point.X;
 
-			if (point.y > accroche.y)
-				iVary = point.y - accroche.y;
+			if (point.Y > Accroche.Y)
+				iVary = point.Y - Accroche.Y;
 			else
-				iVary = accroche.y - point.y;
+				iVary = Accroche.Y - point.Y;
 
 			Idifference = (int)Math.Sqrt((double)((iVarx * iVarx) + (iVary * iVary)));  // Go 3e secondaire
 
@@ -91,7 +95,7 @@ namespace MaBibli
 	{
 		public int Compare(MyCircle a, MyCircle b)
 		{
-			return a.accroche.x.CompareTo(b.accroche.x);
+			return a.Accroche.X.CompareTo(b.Accroche.X);
 		}
 
 	}

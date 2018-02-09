@@ -1,0 +1,9 @@
+C:\Users\FDP\source\repos\MaBibli\LaConsole\bin\Debug\LaConsole.exe.config
+C:\Users\FDP\source\repos\MaBibli\LaConsole\bin\Debug\LaConsole.exe
+C:\Users\FDP\source\repos\MaBibli\LaConsole\bin\Debug\LaConsole.pdb
+C:\Users\FDP\source\repos\MaBibli\LaConsole\bin\Debug\MaBibli.dll
+C:\Users\FDP\source\repos\MaBibli\LaConsole\bin\Debug\MaBibli.pdb
+C:\Users\FDP\source\repos\MaBibli\LaConsole\obj\Debug\ConsoleTestApp.csprojResolveAssemblyReference.cache
+C:\Users\FDP\source\repos\MaBibli\LaConsole\obj\Debug\ConsoleTestApp.csproj.CoreCompileInputs.cache
+C:\Users\FDP\source\repos\MaBibli\LaConsole\obj\Debug\LaConsole.exe
+C:\Users\FDP\source\repos\MaBibli\LaConsole\obj\Debug\LaConsole.pdb

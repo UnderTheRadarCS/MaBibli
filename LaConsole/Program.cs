@@ -1,11 +1,11 @@
-﻿using MaBibli;
+﻿using MyGraphicsComponents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LaConsole
+namespace ConsoleTestApp
 {
 	class Program
 	{
@@ -89,7 +89,7 @@ namespace LaConsole
 
 			Console.WriteLine("\nCarré de la liste dont la longueur vaut 15 : \n");
 
-			(carre.Find(x => x.longueur == 15)).Draw();
+			(carre.Find(x => x.Longueur == 15)).Draw();
 
 			Console.WriteLine("\nCarré de la liste dont le point (20,20) fait partie : \n");
 

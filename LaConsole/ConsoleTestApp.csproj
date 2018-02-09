@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MaBibli\MaBibli.csproj">
+    <ProjectReference Include="..\MaBibli\MyGraphicsComponents.csproj">
       <Project>{BA4E9B00-FA0C-4684-BB4A-B55B1B0CC3B8}</Project>
-      <Name>MaBibli</Name>
+      <Name>MyGraphicsComponents</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
