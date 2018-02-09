@@ -42,6 +42,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="ILsPointIn.cs" />
+    <Compile Include="MyCircle.cs" />
+    <Compile Include="MyPoint.cs" />
+    <Compile Include="MyRectangle.cs" />
+    <Compile Include="MySquare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

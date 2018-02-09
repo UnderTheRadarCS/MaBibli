@@ -10,4 +10,12 @@ namespace MaBibli
 	{
 		bool IsPointIn(MyPoint point);
 	}
+
+	public interface IPointy
+	{ 
+		 byte Points
+			{ get; }
+
+		
+	}
 }
